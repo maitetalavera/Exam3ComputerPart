@@ -52,7 +52,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 5. (10 pts)
+# DONE: 5. (10 pts)
 #
 #   For this _todo_, using the command keyword on each button to have each
 #   number button type that digit in the amount label above (just like you
@@ -78,7 +78,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 5. (3 pts)
+# DONE: 5. (3 pts)
 #
 #   For this _todo_, bind the window to any keypress so that if the user types
 #   a number, it also types that number into the amount label. Remember, you
@@ -86,7 +86,6 @@ import tkinter as tk
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-start=1000
 window=tk.Tk()
 window.title("ATM")
 
@@ -141,41 +140,41 @@ def handler_0():
     lbl_number['text']=lbl_number['text']
 
 def handler_withdrawl():
-    global start
+    a=1000
     lbl_number['text']=lbl_number['text']
-    start -= int(lbl_number['text'])
-    lbl_4['text']=str(start)
-    
+    a -= int(lbl_number['text'])
+    lbl_dollar['text']=str(a)
+
 def handler_deposit():
-    global start
+    a=1000
     lbl_number['text']=lbl_number['text']
-    start += int(lbl_number['text'])
-    lbl_4['text']=str(start)
+    a += int(lbl_number['text'])
+    lbl_dollar['text']=str(a)
 
 
-btn1=tk.Button(master=frame_a, text="1", command=handler_1)
+btn1=tk.Button(master=frame_a, text="1", command=handler_1, bd=0, padx=75, pady=75)
 btn1.grid(row=0, column=0, sticky="nsew")
-btn2=tk.Button(master=frame_a, text="2", command=handler_2)
+btn2=tk.Button(master=frame_a, text="2", command=handler_2, bd=0, padx=75, pady=75)
 btn2.grid(row=0, column=1, sticky="nsew")
-btn3=tk.Button(master=frame_a, text="3", command=handler_3)
+btn3=tk.Button(master=frame_a, text="3", command=handler_3, bd=0, padx=75, pady=75)
 btn3.grid(row=0, column=2, sticky="nsew")
-btn4=tk.Button(master=frame_a, text="4", command=handler_4)
+btn4=tk.Button(master=frame_a, text="4", command=handler_4, bd=0, padx=75, pady=75)
 btn4.grid(row=1, column=0, sticky="nsew")
-btn5=tk.Button(master=frame_a, text="5", command=handler_5)
+btn5=tk.Button(master=frame_a, text="5", command=handler_5, bd=0, padx=75, pady=75)
 btn5.grid(row=1, column=1, sticky="nsew")
-btn6=tk.Button(master=frame_a, text="6", command=handler_6)
+btn6=tk.Button(master=frame_a, text="6", command=handler_6, bd=0, padx=75, pady=75)
 btn6.grid(row=1, column=2, sticky="nsew")
-btn7=tk.Button(master=frame_a, text="7", command=handler_7)
+btn7=tk.Button(master=frame_a, text="7", command=handler_7, bd=0, padx=75, pady=75)
 btn7.grid(row=2, column=0, sticky="nsew")
-btn8=tk.Button(master=frame_a, text="8", command=handler_8)
+btn8=tk.Button(master=frame_a, text="8", command=handler_8, bd=0, padx=75, pady=75)
 btn8.grid(row=2, column=1, sticky="nsew")
-btn9=tk.Button(master=frame_a, text="9", command=handler_9)
+btn9=tk.Button(master=frame_a, text="9", command=handler_9, bd=0, padx=75, pady=75)
 btn9.grid(row=2, column=2, sticky="nsew")
-btn0=tk.Button(master=frame_a, text="0", command=handler_0)
+btn0=tk.Button(master=frame_a, text="0", command=handler_0, bd=0, padx=75, pady=75)
 btn0.grid(row=3, column=1, sticky="nsew")
-btn_withdrawl=tk.Button(master=frame_a, text="Withdrawl", command=handler_withdrawl)
+btn_withdrawl=tk.Button(master=frame_a, text="Withdrawl", command=handler_withdrawl, bd=0, padx=75, pady=75)
 btn_withdrawl.grid(row=3, column=0, sticky="nsew")
-btn_deposit=tk.Button(master=frame_a, text="Deposit", command=handler_deposit)
+btn_deposit=tk.Button(master=frame_a, text="Deposit", command=handler_deposit, bd=0, padx=75, pady=75)
 btn_deposit.grid(row=3, column=2, sticky="nsew")
 
 def handle_keypress(event):
