@@ -101,11 +101,11 @@ def get_ticket(movie):
 
 
 def main():
-     print("Welcome!")
+    print("Welcome!")
 
-     movies=[]
+    movies=[]
 
-     while True: 
+    while True: 
           title = input ("Please enter title:")
           if title == "end" : break
           duration = input ("Please enter duration:")
@@ -126,5 +126,9 @@ def main():
           }
           movies.append(movie)
           show_movies(movies)
+          while True: 
+               get_ticket = input ("Which movie would you like to buy a ticket for?")
+               if get_ticket == "end": break
+         
 
 main()
