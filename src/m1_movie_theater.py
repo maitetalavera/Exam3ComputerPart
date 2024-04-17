@@ -29,6 +29,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def show_movies(movies):
+    print("\nMovies:")
+    for movie in movies:
+        
+
 ###############################################################################
 # TODO: 2. (3 pts)
 #
