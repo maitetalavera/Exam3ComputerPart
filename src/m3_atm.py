@@ -91,12 +91,12 @@ window=tk.Tk()
 window.title("ATM")
 
 
-lbl_balance=tk.Label(master=window, text="Current Balance $:")
+lbl_balance=tk.Label(master=window, text="Current Balance ($):")
 lbl_dollar=tk.Label(master=window, text="1000")
 lbl_balance.pack()
 lbl_dollar.pack()
 
-lbl_amount=tk.Label(master=window, text="Amount $:")
+lbl_amount=tk.Label(master=window, text="Amount ($):")
 lbl_4=tk.Label(master=window, text="")
 lbl_amount.pack()
 lbl_4.pack()
@@ -105,8 +105,8 @@ lbl_number=tk.Label(master=window, text="")
 lbl_number.pack()
 
 frame_a=tk.Frame(master=window)
-frame_a.rowconfigure([0,1,2,3], weight=1, minsize=75)
-frame_a.columnconfigure([0,1,2], weight=1, minsize=75)
+frame_a.rowconfigure([0,1,2,3], weight=1, minsize=50)
+frame_a.columnconfigure([0,1,2], weight=1, minsize=50)
 frame_a.pack()
 
 
@@ -182,6 +182,6 @@ def handle_keypress(event):
     if event.keysym.isdigit():
         lbl_number['text']=lbl_number['text']+event.keysym
 
-window.bind("<Keys>", handle_keypress)
+window.bind("<Key>", handle_keypress)
 
 window.mainloop()
