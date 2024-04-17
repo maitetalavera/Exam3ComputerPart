@@ -32,8 +32,8 @@
 def show_movies(movies):
     print("\nMovies:")
     for movie in movies:
+            print(f"Title: \nDuration: \nStart Time: \nTheater: \nTickets Available:")
         
-
 ###############################################################################
 # TODO: 2. (3 pts)
 #
@@ -56,6 +56,16 @@ def show_movies(movies):
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def get_ticket(movie):
+    if movie["num_of_tickets"] > 0:
+        movie["num_of_tickets"]="num_of_tickets" - 1
+
+    else:
+        print("There are currently no tickets available for that movie.")
+
+
+
 
 ###############################################################################
 # TODO: 3. (9 pts)
@@ -88,3 +98,33 @@ def show_movies(movies):
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+
+def main():
+     print("Welcome!")
+
+     movies=[]
+
+     while True: 
+          title = input ("Please enter title:")
+          if title == "end" : break
+          duration = input ("Please enter duration:")
+          if duration == "end" : break
+          start_time = input ("Please enter start time:")
+          if start_time == "end" : break
+          theater_num = input ("Please enter theater number:")
+          if theater_num == "end" : break
+          num_of_tickets = input ("Please enter number of tickets:")
+          if num_of_tickets == "end" : break
+
+          movie= {
+               "title" : title, 
+               "duration": duration, 
+               "start time": start_time, 
+               "theater number": theater_num,
+               "number of tickets": num_of_tickets
+          }
+          movies.append(movie)
+          show_movies(movies)
+
+main()
