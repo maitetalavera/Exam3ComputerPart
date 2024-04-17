@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   For this module, we are going to create a basic program to handle movie
 #   times at a movie theater. For our purposes, a movie is going to be defined
@@ -32,10 +32,14 @@
 def show_movies(movies):
     print("\nMovies:")
     for movie in movies:
-            print(f"Title: \nDuration: \nStart Time: \nTheater: \nTickets Available:")
+            print("Title:" , movie.get("title"))
+            print("Duration:" , movie.get("duration"))
+            print("Start Time:" , movie.get("start_time"))
+            print("Theater:" , movie.get("theater_num"))
+            print("Number of Tickets:" , movie.get("num_of_tickets"))
         
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   For this _todo_, write a function called get_ticket() that takes one
 #   parameter:
@@ -68,7 +72,7 @@ def get_ticket(movie):
 
 
 ###############################################################################
-# TODO: 3. (9 pts)
+# DONE: 3. (9 pts)
 #
 #   Now, let's create our movie showtimes system.
 #
@@ -120,9 +124,9 @@ def main():
           movie= {
                "title" : title, 
                "duration": duration, 
-               "start time": start_time, 
-               "theater number": theater_num,
-               "number of tickets": num_of_tickets
+               "start_time": start_time, 
+               "theater_num": theater_num,
+               "num_of_tickets": num_of_tickets
           }
           movies.append(movie)
           show_movies(movies)
