@@ -1,7 +1,7 @@
 import tkinter as tk
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   The todos in this module are in one comment because you will be modifying
 #   the same bit of code each time. Here you will create a basic ATM
@@ -13,7 +13,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   For this _todo_, you will create an area where the user's current balance
 #   is displayed. There should be a label that says "Current Balance ($):" and
@@ -27,7 +27,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 3 (3 pts)
+# DONE: 3 (3 pts)
 #
 #   For this _todo_, create two more labels: one that says "Amount ($):" and
 #   another that starts out empty beneath it. This is where the user's amount
@@ -86,3 +86,90 @@ import tkinter as tk
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+window=tk.Tk()
+window.title("ATM")
+
+lbl_balance=tk.Label(master=window, text="Current Balance $:")
+lbl_dollar=tk.Label(master=window, text="1000")
+lbl_balance.pack()
+lbl_dollar.pack()
+
+lbl_amount=tk.Label(master=window, text="Amount $:")
+lbl_4=tk.Label(master=window, text="")
+lbl_amount.pack()
+lbl_4.pack()
+
+lbl_number=tk.Label(master=window, text="")
+lbl_number.pack()
+
+frame_a=tk.Frame(master=window)
+frame_a.rowconfigure([0,1,2,3], weight=1, minsize=75)
+frame_a.columnconfigure([0,1,2], weight=1, minsize=75)
+frame_a.pack()
+
+
+def handler_1():
+    lbl_number['text']=lbl_number['text']+ "1"
+
+def handler_2():
+    lbl_number['text']=lbl_number['text']+ "2"
+
+def handler_3():
+    lbl_number['text']=lbl_number['text']+ "3"
+
+def handler_4():
+    lbl_number['text']=lbl_number['text']+ "4"
+
+def handler_5():
+    lbl_number['text']=lbl_number['text']+ "5"
+
+def handler_6():
+    lbl_number['text']=lbl_number['text']+ "6"
+
+def handler_7():
+    lbl_number['text']=lbl_number['text']+ "7"
+
+def handler_8():
+    lbl_number['text']=lbl_number['text']+ "8"
+    
+def handler_9():
+    lbl_number['text']=lbl_number['text']+ "9"
+
+def handler_0():
+    lbl_number['text']=lbl_number['text']
+
+def handler_withdrawl():
+    lbl_number['text']=lbl_number['text']= ""
+    
+def handler_deposit():
+    lbl_number['text']=lbl_number['text']+ ""
+
+btn1=tk.Button(master=frame_a, text="1", command=handler_1, size=75)
+btn1.grid(row=0, column=0, sticky="nsew")
+btn2=tk.Button(master=frame_a, text="2", command=handler_1, size=75)
+btn2.grid(row=0, column=1, sticky="nsew")
+btn3=tk.Button(master=frame_a, text="3", command=handler_1, size=75)
+btn3.grid(row=0, column=2, sticky="nsew")
+btn4=tk.Button(master=frame_a, text="4", command=handler_1, size=75)
+btn4.grid(row=1, column=0, sticky="nsew")
+btn5=tk.Button(master=frame_a, text="5", command=handler_1, size=75)
+btn5.grid(row=1, column=1, sticky="nsew")
+btn6=tk.Button(master=frame_a, text="6", command=handler_1, size=75)
+btn6.grid(row=1, column=2, sticky="nsew")
+btn7=tk.Button(master=frame_a, text="7", command=handler_1, size=75)
+btn7.grid(row=2, column=0, sticky="nsew")
+btn8=tk.Button(master=frame_a, text="8", command=handler_1, size=75)
+btn8.grid(row=2, column=1, sticky="nsew")
+btn9=tk.Button(master=frame_a, text="9", command=handler_1)
+btn9.grid(row=2, column=2, sticky="nsew")
+btn0=tk.Button(master=frame_a, text="0", command=handler_0)
+btn0.grid(row=3, column=1, sticky="nsew")
+btn_withdrawl=tk.Button(master=frame_a, text="Withdrawl", command=handler_1)
+btn_withdrawl.grid(row=3, column=0, sticky="nsew")
+btn_deposit=tk.Button(master=frame_a, text="Deposit", command=handler_1)
+btn_deposit.grid(row=3, column=2, sticky="nsew")
+
+
+
+window.mainloop()

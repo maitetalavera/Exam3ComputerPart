@@ -129,6 +129,7 @@ def main():
           while True: 
                get_ticket = input ("Which movie would you like to buy a ticket for?")
                if get_ticket == "end": break
-         
+    for x in movies:
+         print(x)     
 
 main()
